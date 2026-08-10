@@ -1,84 +1,118 @@
-/* Modern mobilversion */
-@media (max-width: 800px) {
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partille Goes Barsebäck – en dramatisk golfhelg på Barsebäck Country Club.">
+    <title>Partille Goes Barsebäck</title>
 
-    body {
-        background:
-            linear-gradient(rgba(3, 18, 13, 0.88), rgba(3, 18, 13, 0.95)),
-            url("https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1200&q=80")
-            center / cover fixed;
-        padding-bottom: 82px;
-    }
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    /* Mobil header */
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 22px 18px 24px;
-        background:
-            linear-gradient(135deg, rgba(3, 17, 13, 0.98), rgba(13, 51, 40, 0.95));
-        border-right: none;
-        border-bottom: 1px solid rgba(216, 180, 90, 0.4);
-        text-align: center;
-    }
+    <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Öppna meny">
+            ☰
+        </button>
 
-    .logo {
-        display: block;
-        width: 145px;
-        height: 85px;
-        margin: 0 auto 10px;
-        border-radius: 14px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-    }
+        <div class="topbar-title">
+            Partille Goes Barsebäck
+        </div>
+    </header>
 
-    .temporary-logo-text {
-        font-size: 10px;
-        margin: 0 0 15px;
-    }
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <!-- Byt enkelt ut filen logga.jpeg mot en annan logotyp senare -->
+            <img src="logga.jpeg" alt="Partille Goes Barsebäck logotyp"
+                 onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';">
 
-    .event-name {
-        font-size: 25px;
-        line-height: 1.05;
-        margin-bottom: 0;
-        text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
-    }
+            <!-- Tillfällig text om logga.jpeg saknas -->
+            <div id="logoFallback" class="logo-fallback">
+                PGB
+            </div>
+        </div>
 
-    .event-name span {
-        font-size: 10px;
-        letter-spacing: 2px;
-        margin-top: 8px;
-    }
+        <nav class="navigation">
+            <a href="#home" class="nav-link active">Main info</a>
+            <a href="#location" class="nav-link">Location</a>
+            <a href="#players" class="nav-link">Players</a>
+            <a href="#formats" class="nav-link">Formats</a>
+        </nav>
 
-    /* Dölj desktop-texten längst ner */
-    .sidebar-footer {
-        display: none;
-    }
+        <div class="sidebar-footer">
+            Barsebäck Country Club
+        </div>
+    </aside>
 
-    /* Fast mobilmeny längst ner */
-    nav {
-        position: fixed;
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
-        z-index: 100;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-        padding: 8px;
-        background: rgba(4, 20, 15, 0.94);
-        border: 1px solid rgba(216, 180, 90, 0.45);
-        border-radius: 20px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
-        backdrop-filter: blur(15px);
-    }
+    <main class="content">
 
-    nav a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 50px;
-        padding: 7px 3px;
-        border: none;
-        border-radius: 14px;
-        color: #bacabd;
- 
+        <!-- Startsida -->
+        <section id="home" class="page-section hero-section">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="eyebrow">THE BATTLE BEGINS</p>
+
+                <h1>
+                    Partille<br>
+                    <span>Goes Barsebäck</span>
+                </h1>
+
+                <p class="hero-text">
+                    En helg. Åtta spelare. En legendarisk bana.
+                    När Partille möter Barsebäck finns det inget utrymme
+                    för tvekan – bara precision, prestige och dramatik.
+                </p>
+
+                <a href="#main-info" class="hero-button nav-link">
+                    Upptäck eventet
+                </a>
+            </div>
+        </section>
+
+        <!-- Main info -->
+        <section id="main-info" class="page-section information-section">
+            <p class="eyebrow">MAIN INFO</p>
+            <h2>Helgen där rivalitet blir historia</h2>
+
+            <div class="text-content">
+                <p>
+                    <strong>Partille Goes Barsebäck</strong> är årets stora golfduell,
+                    där åtta tävlingssugna spelare samlas på en av Sveriges mest
+                    spektakulära golfanläggningar.
+                </p>
+
+                <p>
+                    Under tre intensiva dagar ställs lagkamrater mot varandra i en
+                    kamp fylld av taktik, nervositet och oväntade vändningar.
+                    Varje slag räknas, varje putt kan förändra matchen och varje
+                    spelare måste leverera när pressen är som störst.
+                </p>
+
+                <p>
+                    Det här är mer än bara en golftävling. Det är en helg av
+                    gemenskap, prestige, skratt och hård konkurrens – där vinnarna
+                    får äran och förlorarna får bära minnet tills nästa upplaga.
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <span class="highlight-number">3</span>
+                <div>
+                    <strong>dagar av golf</strong>
+                    <p>Bästboll, lagspel och singelmatcher i Ryder Cup-stil.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section id="location" class="page-section dark-section">
+            <p class="eyebrow">LOCATION</p>
+            <h2>Barsebäck Country Club</h2>
+
+            <div class="location-card">
+                <div class="location-icon">⌖</div>
+                <div>
+                    <h3>En scen värdig kampen</h3>
+                    <p>
+                        Barsebäck Country Club ligger vackert belä
