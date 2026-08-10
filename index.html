@@ -2,409 +2,116 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partille Goes Barsebäck</title>
+
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
+        :root {
+            --dark-green: #071b16;
+            --green: #0d3328;
+            --light-green: #1f694d;
+            --gold: #d8b45a;
+            --cream: #f4f0df;
+            --text-light: #eef3ed;
+            --muted: #bacabd;
         }
 
-        /* Wrapper */
-        .container {
-            display: flex;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                linear-gradient(rgba(4, 19, 14, 0.88), rgba(4, 19, 14, 0.93)),
+                url("https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=2000&q=80")
+                center / cover fixed;
+            color: var(--text-light);
             min-height: 100vh;
         }
 
-        /* Vänster meny */
+        /* Vänstermenyn */
         .sidebar {
-            width: 230px;
-            background: #004225; /* mörkgrön golfkänsla */
-            color: #fff;
-            padding: 20px;
-            box-sizing: border-box;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100vh;
+            padding: 30px 22px;
+            background: rgba(3, 17, 13, 0.96);
+            border-right: 1px solid rgba(216, 180, 90, 0.35);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
         }
 
         .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 2px solid #fff;
-        }
-
-        /* BYT LOGGAN HÄR:
-           Ersätt src-attributet med din egen logofil, t.ex. "images/logo.png" */
-        .logo-placeholder {
             width: 100%;
-            height: 100px;
-            background: #fff;
-            color: #004225;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            border-radius: 10px;
-            border: 2px solid #fff;
-            box-sizing: border-box;
-        }
-
-        .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .menu li {
-            margin-bottom: 10px;
-        }
-
-        .menu button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background: #006a36;
-            color: #fff;
-            cursor: pointer;
-            text-align: left;
-            font-size: 15px;
-            border-radius: 4px;
-        }
-
-        .menu button:hover,
-        .menu button.active {
-            background: #00a253;
-        }
-
-        /* Huvudinnehåll */
-        .content {
-            flex: 1;
-            padding: 30px;
-            box-sizing: border-box;
-            background: #ffffff;
-        }
-
-        h1, h2, h3 {
-            color: #004225;
-        }
-
-        .section {
-            display: none;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        /* Spelarlista */
-        .players-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .player-card {
-            border: 1px solid #ddd;
+            max-width: 190px;
+            height: 120px;
+            object-fit: contain;
+            margin: 0 auto 28px;
             border-radius: 8px;
-            padding: 15px;
-            background: #fafafa;
+            background: white;
+            padding: 8px;
         }
 
-        .player-image {
-            width: 100%;
-            height: 150px;
-            background: #ccc;
-            border-radius: 6px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .temporary-logo-text {
+            color: var(--gold);
+            font-size: 12px;
+            text-align: center;
+            margin-top: -20px;
+            margin-bottom: 25px;
+            opacity: 0.85;
+        }
+
+        .event-name {
+            text-align: center;
+            color: var(--cream);
+            font-family: Georgia, serif;
+            font-size: 22px;
+            line-height: 1.15;
+            margin-bottom: 35px;
+        }
+
+        .event-name span {
+            display: block;
+            color: var(--gold);
             font-size: 13px;
-            color: #555;
+            letter-spacing: 3px;
+            margin-top: 8px;
+            font-family: Arial, sans-serif;
         }
 
-        /* När du har riktiga bilder, byt t.ex. till:
-           <img src="bilder/johan_c.jpg" alt="Johan C" class="player-img-real">
-        */
-        .player-img-real {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
-        .player-name {
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            padding: 14px 16px;
+            border-left: 3px solid transparent;
+            transition: 0.25s ease;
+            letter-spacing: 1px;
             font-weight: bold;
-            margin-bottom: 5px;
         }
 
-        .player-label {
-            font-weight: bold;
+        nav a:hover,
+        nav a.active {
+            color: white;
+            background: rgba(216, 180, 90, 0.12);
+            border-left-color: var(--gold);
+            transform: translateX(4px);
         }
 
-        /* Formatlista */
-        .formats-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .formats-list li {
-            margin-bottom: 8px;
-        }
-
-        .format-day {
-            font-weight: bold;
-            color: #004225;
-        }
-
-        /* Enkel responsiv anpassning */
-        @media (max-width: 800px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .menu {
-                width: 100%;
-            }
-
-            .menu button {
-                text-align: center;
-            }
-
-            .content {
-                padding: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-
-    <!-- Vänster meny + logga -->
-    <aside class="sidebar">
-        <div class="logo">
-            <!-- LOGGA – PLATSHÅLLARE -->
-            <!-- Byt hela div:en mot t.ex. <img src="din_logga.png" alt="Partille Goes Barsebäck logga"> -->
-            <div class="logo-placeholder">
-                LOGO<br>Partille Goes Barsebäck
-            </div>
-        </div>
-
-        <ul class="menu">
-            <li><button class="menu-button active" data-target="main-info">Main info</button></li>
-            <li><button class="menu-button" data-target="location">Location</button></li>
-            <li><button class="menu-button" data-target="players">Players</button></li>
-            <li><button class="menu-button" data-target="formats">Formats</button></li>
-        </ul>
-    </aside>
-
-    <!-- Huvudinnehåll -->
-    <main class="content">
-        <!-- Main info -->
-        <section id="main-info" class="section active">
-            <h1>Partille Goes Barsebäck</h1>
-            <p>
-                Partille Goes Barsebäck är ett årligt golfäventyr där ett gäng dedikerade
-                golfare från Partille samlas för att utmana varandra på klassiska
-                Barsebäck Country Club. Fokus ligger på vänskap, tävlingsanda och
-                minnen både på och utanför banan.
-            </p>
-            <p>
-                Under tre intensiva dagar spelas olika spelformer där laganda, taktik
-                och nerver sätts på prov. Poängen räknas löpande och den som presterar
-                bäst över hela helgen kan stolt titulera sig mästare av
-                <strong>Partille Goes Barsebäck</strong>.
-            </p>
-            <p>
-                Utöver själva spelet bjuder helgen på gemensamma middagar, analys av
-                rundorna, lättsamt gnabb och planering inför kommande år. Traditioner
-                skapas, rivaliteter byggs upp och varje upplaga skriver sin egen historia.
-            </p>
-        </section>
-
-        <!-- Location -->
-        <section id="location" class="section">
-            <h2>Location – Barsebäck Country Club</h2>
-            <p>
-                Barsebäck Country Club är en av Nordens mest välrenommerade golfanläggningar,
-                vackert belägen vid Öresunds kust. Här kombineras utmanande golfhål
-                med fantastisk utsikt över havet och en bana som kräver både precision
-                och strategi.
-            </p>
-            <p>
-                Anläggningen erbjuder två högklassiga 18-hålsbanor samt en trivsam
-                klubbmiljö med restaurang, övningsområden och boendemöjligheter.
-                Vädret kan spela en stor roll – vindarna från sundet gör att samma
-                hål kan vara totalt olika från dag till dag.
-            </p>
-            <p>
-                För deltagarna i Partille Goes Barsebäck är det här den perfekta scenen:
-                en bana där bra slag verkligen belönas, men där varje liten miss
-                också kan kosta dyrbara poäng i totalen.
-            </p>
-        </section>
-
-        <!-- Players -->
-        <section id="players" class="section">
-            <h2>Players</h2>
-            <p>Nedan presenteras årets spelare i Partille Goes Barsebäck.</p>
-
-            <div class="players-grid">
-                <!-- Johan C -->
-                <div class="player-card">
-                    <!-- TILLFÄLLIG BILD – byt mot riktig:
-                         <img src="bilder/johan_c.jpg" alt="Johan C" class="player-img-real">
-                    -->
-                    <div class="player-image">
-                        Bildplats – Johan C
-                    </div>
-                    <div class="player-name">Johan C</div>
-                    <p><span class="player-label">Styrkor:</span> Stabil från tee, iskall på de korta puttarna och bra på att hålla humöret uppe i bollen.</p>
-                    <p><span class="player-label">Svagheter:</span> Kan bli väl försiktig i motvind och ibland överanalyserar han klubbvalet.</p>
-                </div>
-
-                <!-- Johan Kr -->
-                <div class="player-card">
-                    <div class="player-image">
-                        Bildplats – Johan Kr
-                    </div>
-                    <div class="player-name">Johan Kr</div>
-                    <p><span class="player-label">Styrkor:</span> Kreativ runt green, vass med wedgarna och orädd när flaggan står tufft placerad.</p>
-                    <p><span class="player-label">Svagheter:</span> Driverna kan spreta åt alla håll när tajmingen försvinner.</p>
-                </div>
-
-                <!-- Johan Kö -->
-                <div class="player-card">
-                    <div class="player-image">
-                        Bildplats – Johan Kö
-                    </div>
-                    <div class="player-name">Johan Kö</div>
-                    <p><span class="player-label">Styrkor:</span> Långt från tee, trygg med järnen och bra på att höja sig när pressen ökar.</p>
-                    <p><span class="player-label">Svagheter:</span> Korta chippar kan bli nerviga och leda till onödiga bogeys.</p>
-                </div>
-
-                <!-- Daniel -->
-                <div class="player-card">
-                    <div class="player-image">
-                        Bildplats – Daniel
-                    </div>
-                    <div class="player-name">Daniel</div>
-                    <p><span class="player-label">Styrkor:</span> Taktiskt stark, smart banstrategi och trygg tvåputtare från längre håll.</p>
-                    <p><span class="player-label">Svagheter:</span> Kan ibland spela för säkert och tappa chanser på birdies.</p>
-                </div>
-
-                <!-- Örjan -->
-                <div class="player-card">
-                    <div class="player-image">
-                        Bildplats – Örjan
-                    </div>
-                    <div class="player-name">Örjan</div>
-                    <p><span class="player-label">Styrkor:</span> Hög lägstanivå, bra fokus hela rundan och sällan riktigt dåliga hål.</p>
-                    <p><span class="player-label">Svagheter:</span> Har en tendens att jaga för hårt när han ligger efter i poäng.</p>
-                </div>
-
-                <!-- Magnus -->
-                <div class="player-card">
-                    <div class="player-image">
-                        Bildplats – Magnus
-                    </div>
-                    <div class="player-name">Magnus</div>
-                    <p><span class="player-label">Styrkor:</span> Trygg i bunkern, säkra inspel och en väldigt jämn ballstriking.</p>
-                    <p><span class="player-label">Svagheter:</span> De allra kortaste puttarna kan spöka när rundan börjar räknas på riktigt.</p>
-                </div>
-
-                <!-- Marcus -->
-                <div class="player-card">
-                    <div class="player-image">
-                        Bildplats – Marcus
-                    </div>
-                    <div class="player-name">Marcus</div>
-                    <p><span class="player-label">Styrkor:</span> Explosivt spel med förmåga att göra många birdies när det stämmer.</p>
-                    <p><span class="player-label">Svagheter:</span> Svajigt självförtroende – en dålig hålsekvens kan dra ner hela rundan.</p>
-                </div>
-
-                <!-- Patrik -->
-                <div class="player-card">
-                    <div class="player-image">
-                        Bildplats – Patrik
-                    </div>
-                    <div class="player-name">Patrik</div>
-                    <p><span class="player-label">Styrkor:</span> Lugnt temperament, bra lagspelare och stark i pressade lägen.</p>
-                    <p><span class="player-label">Svagheter:</span> Kan bli lite väl defensiv på par 5:or och missa möjligheter till birdie.</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Formats -->
-        <section id="formats" class="section">
-            <h2>Formats</h2>
-            <p>
-                Under Partille Goes Barsebäck spelas tre rundor med olika fokus, men
-                alla räknas in i den totala sammanställningen. Helgens upplägg:
-            </p>
-
-            <ul class="formats-list">
-                <li>
-                    <span class="format-day">Fredag – Bästboll</span><br>
-                    Tvåspelarlag där båda spelar sin egen boll hela hålet. Lagets resultat
-                    på hålet är den bästa scoren av spelarna. Perfekt för att komma igång
-                    med lite trygghet från sin partner.
-                </li>
-                <li>
-                    <span class="format-day">Lördag – Bästboll</span><br>
-                    Samma format som fredagen, men nu börjar poängen bli riktigt viktiga.
-                    Lagen kan ta lite mer risk, vetandes att partnern kan rädda upp
-                    ett misslyckat slag.
-                </li>
-                <li>
-                    <span class="format-day">Söndag – Singel</span><br>
-                    Individuell tävling, man-mot-man mot banan. Inga lagkamrater att luta
-                    sig mot – varje slag räknas och den som hanterar pressen bäst kan
-                    klättra rejält i resultatlistan.
-                </li>
-            </ul>
-        </section>
-
-    </main>
-</div>
-
-<script>
-    // Enkel JavaScript för att växla mellan sektionerna
-    const buttons = document.querySelectorAll('.menu-button');
-    const sections = document.querySelectorAll('.section');
-
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetId = btn.getAttribute('data-target');
-
-            // Menyknappar – uppdatera "active"
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            // Sektioner – visa rätt, göm övriga
-            sections.forEach(sec => {
-                if (sec.id === targetId) {
-                    sec.classList.add('active');
-                } else {
-                    sec.classList.remove('active');
-                }
-            });
-        });
-    });
-</script>
-
-</body>
-</html>
+        .sidebar-footer {
+            margin-top: auto;
