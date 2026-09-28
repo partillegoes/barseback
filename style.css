@@ -789,3 +789,173 @@ footer {
         padding: 20px;
     }
 }
+
+/* Teams */
+.teams-section {
+    background: var(--cream);
+    color: var(--green-dark);
+}
+
+.teams-intro {
+    max-width: 800px;
+    margin: -10px 0 45px;
+    color: #536158;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.teams-intro p {
+    margin-bottom: 18px;
+}
+
+.teams-grid {
+    max-width: 950px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.team-card {
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid rgba(7, 27, 22, 0.12);
+    box-shadow: 0 8px 22px rgba(7, 27, 22, 0.08);
+}
+
+.team-header {
+    position: relative;
+    min-height: 175px;
+    padding: 30px;
+    color: var(--white);
+    background: var(--green-dark);
+}
+
+.team-red .team-header {
+    background:
+        linear-gradient(
+            135deg,
+            #8d1f2f 0%,
+            #541925 100%
+        );
+}
+
+.team-blue .team-header {
+    background:
+        linear-gradient(
+            135deg,
+            #1b4e78 0%,
+            #102d4d 100%
+        );
+}
+
+.team-label {
+    display: block;
+    margin-bottom: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.team-header h3 {
+    font-size: 52px;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+.team-color {
+    position: absolute;
+    right: 25px;
+    bottom: 24px;
+    color: rgba(255, 255, 255, 0.25);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.team-players {
+    padding: 12px 25px 20px;
+}
+
+.team-player {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-bottom: 1px solid #e0e5df;
+}
+
+.team-player:last-child {
+    border-bottom: none;
+}
+
+.team-player-number {
+    color: #a9b4ac;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.team-player strong {
+    color: var(--green-dark);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.teams-note {
+    max-width: 950px;
+    margin-top: 25px;
+    padding: 22px 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--green);
+    color: var(--white);
+}
+
+.teams-note > span {
+    color: var(--lime);
+    font-size: 30px;
+    line-height: 1;
+}
+
+.teams-note strong {
+    color: var(--lime);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.teams-note p {
+    margin-top: 5px;
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Anpassning för Teams på mindre skärmar */
+@media (max-width: 760px) {
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-header {
+        min-height: 150px;
+        padding: 25px;
+    }
+
+    .team-header h3 {
+        font-size: 45px;
+    }
+
+    .team-color {
+        font-size: 30px;
+    }
+
+    .teams-note {
+        padding: 20px;
+    }
+}
