@@ -959,3 +959,20 @@ footer {
         padding: 20px;
     }
 }
+
+.schedule-leaderboard {
+    max-width: 900px;
+    margin-top: 28px;
+    color: #536158;
+    font-size: 15px;
+}
+
+.schedule-leaderboard a {
+    color: var(--green-light);
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.schedule-leaderboard a:hover {
+    color: var(--green-dark);
+}
