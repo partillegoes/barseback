@@ -962,17 +962,34 @@ footer {
 
 .schedule-leaderboard {
     max-width: 900px;
-    margin-top: 28px;
+    margin-top: 40px;
+    padding: 20px 24px;
+    border-left: 4px solid var(--green-light);
+    background: var(--white);
+    box-shadow: 0 8px 22px rgba(7, 27, 22, 0.08);
     color: #536158;
     font-size: 15px;
+    line-height: 1.6;
 }
 
 .schedule-leaderboard a {
-    color: var(--green-light);
+    display: inline-block;
+    margin-left: 8px;
+    padding: 8px 14px;
+    border-radius: 3px;
+    background: var(--green);
+    color: var(--white);
     font-weight: 700;
-    text-underline-offset: 3px;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .schedule-leaderboard a:hover {
+    background: var(--lime);
     color: var(--green-dark);
+}
+
+.schedule-leaderboard a:focus-visible {
+    outline: 3px solid var(--lime);
+    outline-offset: 3px;
 }
