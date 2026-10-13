@@ -685,33 +685,21 @@ footer {
     gap: 13px;
 }
 
-/* Varje stopp visas i kolumn (radbryt mellan raderna) */
-.car-stop {
+.car-details > div {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
 }
 
-/* “Stopp 1” osv ska alltid stå på en rad, ej delas */
 .detail-label {
     color: #718078;
     font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    white-space: nowrap;
 }
 
-/* Namn på egen rad */
-.car-stop-name {
+.car-details strong {
     font-size: 13px;
-    font-weight: 600;
-}
-
-/* Adress på raden under namnet */
-.car-stop-address {
-    font-size: 13px;
-    color: #65716a;
+    text-align: right;
 }
 
 .status-open {
