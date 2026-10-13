@@ -1,654 +1,347 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Partille Goes Barsebäck – en dramatisk och härlig golfhelg på Barsebäck Resort.">
+    <meta charset="UTF-8" />
     <title>Partille Goes Barsebäck</title>
-
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+        name="description"
+        content="Partille Goes Barsebäck – 3-dagars golftävling på Barsebäck Resort med åtta spelare och Ryder Cup-upplägg."
+    />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <!-- Top navigation -->
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="#top" class="logo">Partille Goes Barsebäck</a>
 
-    <!-- Topbar (mobil) -->
-    <header class="topbar">
-        <button class="menu-toggle" id="menuToggle" aria-label="Öppna meny">
-            ☰
-        </button>
+            <nav class="main-nav" id="mainNav">
+                <a href="#tournament">Tournament</a>
+                <a href="#players">Players</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#get-there">Get there</a>
+                <a href="#resort">Resort</a>
+            </nav>
 
-        <div class="topbar-title">
-            Partille Goes Barsebäck
+            <button class="nav-toggle" id="navToggle" aria-label="Meny">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
         </div>
     </header>
 
-    <!-- Sidomeny -->
-    <aside class="sidebar" id="sidebar">
-        <div class="logo-container">
-            <div class="custom-logo">
-                <span class="logo-symbol">⛳</span>
-                <span class="logo-main">PGB</span>
-                <span class="logo-sub">PARTILLE<br>GOES BARSEBÄCK</span>
-            </div>
-        </div>
-
-        <nav class="navigation" role="navigation">
-            <a href="#home" class="nav-link active">Main info</a>
-            <a href="#location" class="nav-link">Location</a>
-            <a href="#players" class="nav-link">Players</a>
-            <a href="#teams" class="nav-link">Teams</a>
-            <a href="#formats" class="nav-link">Formats</a>
-            <a href="#schedule" class="nav-link">Schedule</a>
-            <a href="#get-there" class="nav-link">Get there</a>
-        </nav>
-
-        <div class="sidebar-footer">
-            Barsebäck Resort
-        </div>
-    </aside>
-
-    <!-- Innehåll -->
-    <main class="content">
-
-        <!-- Startsida / Hero -->
-        <section id="home" class="page-section hero-section">
-            <div class="hero-overlay"></div>
-
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero">
             <div class="hero-content">
-                <p class="eyebrow">THE BATTLE BEGINS</p>
-
-                <h1>
-                    Partille<br>
-                    <span>Goes Barsebäck</span>
-                </h1>
-
-                <p class="hero-text">
-                    En helg (16–18 okt). Åtta spelare. En legendarisk bana.
-                    När Partille kommer till Barsebäck finns det inget utrymme
-                    för tvekan – bara precision, prestige och dramatik.
+                <p class="eyebrow">Partille goes</p>
+                <h1>Barsebäck 16–18 oktober</h1>
+                <p class="hero-lead">
+                    8 spelare, 3 dagar, Ryder Cup-upplägg. Bästboll, singlar, prisutdelning i baren
+                    och buss tillbaka till hotellet.
                 </p>
-
-                <a href="#main-info" class="hero-button nav-link">
-                    Upptäck eventet
-                </a>
+                <p class="hero-meta">
+                    Fredag–söndag · Barsebäck Resort · Matchspel i lagformat (Bästboll) och singlar.
+                </p>
+            </div>
+            <div class="hero-tag">
+                <span>2026 edition</span>
             </div>
         </section>
 
-        <!-- Main info -->
-        <section id="main-info" class="page-section information-section">
-            <p class="eyebrow">MAIN INFO</p>
-            <h2>Helgen där rivalitet blir historia</h2>
-
-            <div class="text-content">
+        <!-- Tournament section -->
+        <section id="tournament" class="section">
+            <div class="section-inner">
+                <h2>Tournament format</h2>
                 <p>
-                    <strong>Partille Goes Barsebäck</strong> är årets stora golfduell,
-                    där åtta tävlingssugna spelare samlas på en av Sveriges mest
-                    spektakulära golfanläggningar.
+                    Tävlingen spelas över tre dagar med ett Ryder Cup-inspirerat upplägg.
+                    Två lag med fyra spelare vardera möts i bästbollmatcher och singlar.
                 </p>
 
-                <p>
-                    Under tre intensiva dagar ställs lagkamrater mot varandra i en
-                    kamp fylld av taktik, nervositet och oväntade vändningar.
-                    Varje slag räknas, varje putt kan förändra matchen och varje
-                    spelare måste leverera när pressen är som störst.
-                </p>
-
-                <p>
-                    Det här är mer än bara en golftävling. Det är en helg av
-                    gemenskap, prestige, skratt och hård konkurrens – där vinnarna
-                    får äran och förlorarna, inget.
-                </p>
-            </div>
-
-            <div class="highlight-box">
-                <span class="highlight-number">3</span>
-                <div>
-                    <strong>dagar av golf</strong>
-                    <p>Bästboll, lagspel och singelmatcher i Ryder Cup-stil.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Location -->
-        <section id="location" class="page-section dark-section">
-            <p class="eyebrow">LOCATION</p>
-            <h2>Barsebäck Resort</h2>
-
-            <div class="location-card">
-                <div class="location-icon">⌖</div>
-                <div>
-                    <h3>En scen värdig kampen</h3>
-                    <p>
-                        2 timmar och 30 minuter söder om Partille ligger Barsebäck Resort.
-                        Banan ligger vackert belägen vid den skånska kusten och är en av
-                        Sveriges mest uppskattade golfdestinationer.
-                    </p>
-                </div>
-            </div>
-
-            <p class="text-content">
-                Med vindar från Öresund, strategiskt placerade hinder och greener
-                som kräver full koncentration blir Barsebäck den perfekta platsen
-                för en tävling där marginalerna är små.
-            </p>
-
-            <p class="quote">
-                ”Här avgörs inte bara vem som slår längst – utan vem som håller
-                huvudet kallast.”
-            </p>
-        </section>
-
-        <!-- Players -->
-        <section id="players" class="page-section information-section">
-            <p class="eyebrow">PLAYERS</p>
-            <h2>Spelarna</h2>
-
-            <div class="players-grid">
-
-                <article class="player-card">
-                    <h3>Carlsson</h3>
-                    <p><strong>Styrkor:</strong> Stabil från tee och mycket stark i pressade lägen.</p>
-                    <p><strong>Svagheter:</strong> Kan ibland bli för offensiv på svåra hål.</p>
-                </article>
-
-                <article class="player-card">
-                    <h3>Kristoffersson</h3>
-                    <p><strong>Styrkor:</strong> Fantastisk bollkänsla och säker runt greenerna.</p>
-                    <p><strong>Svagheter:</strong> Startar ibland rundorna lite långsamt.</p>
-                </article>
-
-                <article class="player-card">
-                    <h3>Köhnke</h3>
-                    <p><strong>Styrkor:</strong> Långtslående och orädd när det gäller.</p>
-                    <p><strong>Svagheter:</strong> Tar gärna den svåra vägen mot flaggan.</p>
-                </article>
-
-                <article class="player-card">
-                    <h3>Ingemar</h3>
-                    <p><strong>Styrkor:</strong> Jämn, metodisk och svår att stressa.</p>
-                    <p><strong>Svagheter:</strong> Behöver ibland hitta extra längd från tee.</p>
-                </article>
-
-                <article class="player-card">
-                    <h3>Örjan</h3>
-                    <p><strong>Styrkor:</strong> Rutinerad matchspelare med starkt psyke.</p>
-                    <p><strong>Svagheter:</strong> Kan bli lite väl försiktig vid viktiga puttar.</p>
-                </article>
-
-                <article class="player-card">
-                    <h3>Magnus</h3>
-                    <p><strong>Styrkor:</strong> Hög toppnivå och imponerande järnspel.</p>
-                    <p><strong>Svagheter:</strong> Temperamentet kan påverkas av en dålig start.</p>
-                </article>
-
-                <article class="player-card">
-                    <h3>Marcus</h3>
-                    <p><strong>Styrkor:</strong> Kreativ spelare som alltid hittar lösningar.</p>
-                    <p><strong>Svagheter:</strong> Tar ibland onödiga risker.</p>
-                </article>
-
-                <article class="player-card">
-                    <h3>Patrik</h3>
-                    <p><strong>Styrkor:</strong> En stark lagspelare med mycket energi.</p>
-                    <p><strong>Svagheter:</strong> Kan behöva några hål för att komma in i rytmen.</p>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Teams -->
-        <section id="teams" class="page-section teams-section">
-            <p class="eyebrow">TEAMS</p>
-
-            <h2>Lagen</h2>
-
-            <div class="teams-intro">
-                <p>
-                    Lagen presenteras någon vecka före tävling. Lagen tas fram
-                    utifrån algoritmer baserade på spelarnas hcp samt lagens totala hcp
-                    ställt mot varandra.
-                </p>
-
-                <p>
-                    Varje match är förutbestämd utifrån spelarnas ranking i respektive lag och spelas scratch.
-                    Allt för att skapa så jämna lag och matcher som möjligt.
-                </p>
-            </div>
-
-            <div class="teams-grid">
-
-                <!-- Team Red -->
-                <article class="team-card team-red">
-                    <div class="team-header">
-                        <span class="team-label">TEAM</span>
-                        <h3>Red</h3>
-                        <span class="team-color">RED</span>
-                    </div>
-
-                    <div class="team-players">
-                        <div class="team-player">
-                            <strong>Örjan</strong>
-                        </div>
-
-                        <div class="team-player">
-                            <strong>Carlsson</strong>
-                        </div>
-
-                        <div class="team-player">
-                            <strong>Ingemar</strong>
-                        </div>
-
-                        <div class="team-player">
-                            <strong>Magnus</strong>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Team Blue -->
-                <article class="team-card team-blue">
-                    <div class="team-header">
-                        <span class="team-label">TEAM</span>
-                        <h3>Blue</h3>
-                        <span class="team-color">BLUE</span>
-                    </div>
-
-                    <div class="team-players">
-                        <div class="team-player">
-                            <strong>Marcus</strong>
-                        </div>
-
-                        <div class="team-player">
-                            <strong>Kristoffersson</strong>
-                        </div>
-
-                        <div class="team-player">
-                            <strong>Patrik</strong>
-                        </div>
-
-                        <div class="team-player">
-                            <strong>Köhnke</strong>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-
-            <div class="teams-note">
-                <span>⚖</span>
-                <div>
-                    <strong>Jämna lag och matcher</strong>
-                    <p>
-                        Lagindelningen och matcherna fastställs när spelarnas hcp och
-                        ranking har analyserats.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Formats -->
-        <section id="formats" class="page-section dark-section">
-            <p class="eyebrow">FORMATS</p>
-            <h2>Tre dagar. Tre utmaningar.</h2>
-
-            <p class="format-intro">
-                Hela helgen spelas i ett övergripande <strong>Ryder Cup-format</strong>.
-                Spelarna delas in i lag och samlar poäng under tävlingens tre dagar.
-            </p>
-
-            <div class="format-list">
-
-                <div class="format-item">
-                    <div class="format-day">FRE</div>
-                    <div class="format-info">
-                        <h3>Bästboll</h3>
+                <div class="cards-grid">
+                    <article class="info-card">
+                        <h3>Dag 1 – Fredag 16/10</h3>
                         <p>
-                            Två spelare bildar lag. Båda spelar varsin boll på varje
-                            hål, men lagets bästa resultat räknas.
+                            Fokus på ankomst, inspel och att komma in i banan. Kortare
+                            upplägg och möjlighet till inspelsrundor.
                         </p>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="format-item">
-                    <div class="format-day">LÖR</div>
-                    <div class="format-info">
-                        <h3>Bästboll</h3>
+                    <article class="info-card">
+                        <h3>Dag 2 – Lördag 17/10</h3>
                         <p>
-                            Lördagen fortsätter med bästboll. Pressen ökar och lagen
-                            måste hitta rätt strategi för att ta viktiga poäng.
+                            Huvuddag med bästbollmatcher på dagen. Poäng räknas lagvis
+                            och summeras inför singelavgörandet.
                         </p>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="format-item">
-                    <div class="format-day">SÖN</div>
-                    <div class="format-info">
-                        <h3>Singel</h3>
+                    <article class="info-card">
+                        <h3>Dag 3 – Söndag 18/10</h3>
                         <p>
-                            Helgen avgörs i individuella singelmatcher. Spelare mot
-                            spelare – där allt kan avgöras på det sista hålet.
+                            Singelmatcher där varje poäng kan avgöra slutresultatet.
+                            Avslutning och summering på klubben innan hemresa.
                         </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="final-message">
-                <strong>Ryder Cup-format över hela helgen</strong>
-                <p>
-                    Varje match ger poäng till laget. När söndagens sista putt är
-                    hålad koras helgens mästare.
-                </p>
-            </div>
-        </section>
-
-        <!-- Schedule -->
-        <section id="schedule" class="page-section schedule-section">
-            <p class="eyebrow">SCHEDULE</p>
-            <h2>Helgens schema</h2>
-
-            <p class="schedule-intro">
-                Tre dagar fyllda av golf, gemenskap och tävlingsnerver på
-                Barsebäck Resort.
-            </p>
-
-            <div class="schedule-days">
-
-                <!-- Fredag -->
-                <article class="schedule-day">
-                    <div class="schedule-day-header">
-                        <span class="schedule-number">01</span>
-                        <div>
-                            <p class="schedule-weekday">Fredag</p>
-                            <h3>Första slaget</h3>
-                        </div>
-                    </div>
-
-                    <div class="schedule-events">
-                        <div class="schedule-event">
-                            <time>10:00</time>
-                            <div>
-                                <h4>Samling</h4>
-                                <p>Samling på Barsebäck Resort följt av lek på övningsområdet.</p>
-                            </div>
-                        </div>
-
-                        <div class="schedule-event">
-                            <time>11:30–12:30</time>
-                            <div>
-                                <h4>Lunch</h4>
-                                <p>Lunch på Legends House.</p>
-                            </div>
-                        </div>
-
-                        <div class="schedule-event">
-                            <time>13:00 &amp; 13:10</time>
-                            <div>
-                                <h4>Bästbollar</h4>
-                                <p>Matchstart på Ocean Course.</p>
-                            </div>
-                        </div>
-
-                        <!-- Fredag prisutdelning -->
-                        <div class="schedule-event">
-                            <time>17:30</time>
-                            <div>
-                                <h4>Prisutdelning</h4>
-                                <p>Dagens vinnare koras i baren.</p>
-                            </div>
-                        </div>
-
-                        <!-- Fredag shuttle -->
-                        <div class="schedule-event">
-                            <time>18:30</time>
-                            <div>
-                                <h4>Shuttle &amp; incheckning</h4>
-                                <p>
-                                    Shuttle (5 min från klubbhuset) till hotellet och incheckning.
-                                    Valfritt – Patrik stannar i klubbhusets bar.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="schedule-event">
-                            <time>19:30</time>
-                            <div>
-                                <h4>Middag</h4>
-                                <p>Middag på Legends House.</p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Lördag -->
-                <article class="schedule-day">
-                    <div class="schedule-day-header">
-                        <span class="schedule-number">02</span>
-                        <div>
-                            <p class="schedule-weekday">Lördag</p>
-                            <h3>Jakten fortsätter</h3>
-                        </div>
-                    </div>
-
-                    <div class="schedule-events">
-                        <div class="schedule-event">
-                            <time>09:00</time>
-                            <div>
-                                <h4>Frukost</h4>
-                                <p>Gemensam frukost inför dagens matcher.</p>
-                            </div>
-                        </div>
-
-                        <div class="schedule-event">
-                            <time>10:00</time>
-                            <div>
-                                <h4>Träning</h4>
-                                <p>Lek på övningsområdet.</p>
-                            </div>
-                        </div>
-
-                        <div class="schedule-event">
-                            <time>11:30–12:30</time>
-                            <div>
-                                <h4>Lunch</h4>
-                                <p>Lunch på Legends House.</p>
-                            </div>
-                        </div>
-
-                        <div class="schedule-event">
-                            <time>13:05 &amp; 13:15</time>
-                            <div>
-                                <h4>Bästbollar</h4>
-                                <p>Matchstart på Pine Course.</p>
-                            </div>
-                        </div>
-
-                        <!-- Lördag prisutdelning -->
-                        <div class="schedule-event">
-                            <time>17:30</time>
-                            <div>
-                                <h4>Prisutdelning</h4>
-                                <p>Dagens vinnare koras i baren.</p>
-                            </div>
-                        </div>
-
-                        <!-- Lördag shuttle -->
-                        <div class="schedule-event">
-                            <time>18:30</time>
-                            <div>
-                                <h4>Shuttle &amp; incheckning</h4>
-                                <p>
-                                    Shuttle (5 min från klubbhuset) till hotellet och incheckning.
-                                    Valfritt – Patrik stannar i klubbhusets bar.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="schedule-event">
-                            <time>19:30</time>
-                            <div>
-                                <h4>Middag</h4>
-                                <p>Middag på Legends House.</p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Söndag -->
-                <article class="schedule-day">
-                    <div class="schedule-day-header">
-                        <span class="schedule-number">03</span>
-                        <div>
-                            <p class="schedule-weekday">Söndag</p>
-                            <h3>Finaldagen</h3>
-                        </div>
-                    </div>
-
-                    <div class="schedule-events">
-                        <div class="schedule-event">
-                            <time>09:00</time>
-                            <div>
-                                <h4>Frukost</h4>
-                                <p>Frukost inför helgens avgörande matcher.</p>
-                            </div>
-                        </div>
-
-                        <div class="schedule-event">
-                            <time>10:00 &amp; 10:10</time>
-                            <div>
-                                <h4>Singlar</h4>
-                                <p>Helgens singelmatcher spelas på Ocean Course.</p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-
-            <div class="schedule-leaderboard">
-                <p>
-                    Följ ledartavlan med livescore på
-                    <a href="https://app.squabbitgolf.com/w/tournament/TRouzECEr?tab=leaderboard"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Squabbit
-                    </a>.
-                </p>
-            </div>
-        </section>
-
-        <!-- Get There / Transport -->
-        <section id="get-there" class="page-section dark-section transport-section">
-            <p class="eyebrow">GET THERE</p>
-            <h2>Resan till Barsebäck Resort</h2>
-
-            <p class="transport-intro">
-                Vi samordnar transporten inför avresan. Målet är att resa smidigt,
-                bekvämt och med så få bilar som möjligt.
-            </p>
-
-            <div class="car-list">
-
-                <!-- Bil A – VÖ + M -->
-                <article class="car-card">
-                    <div class="car-card-header">
-                        <span class="car-icon">🚗</span>
-                        <div>
-                            <p class="car-label">Bil A</p>
-                            <h3>VÖ + M</h3>
-                        </div>
-                    </div>
-
-                    <div class="car-details">
-                        <div>
-                            <span class="detail-label">Förare</span>
-                            <strong>Kristoffersson</strong>
-                        </div>
-
-                        <div>
-                            <span class="detail-label">Stopp 1</span>
-                            <strong>Örjan – Trägärdsgården 8</strong>
-                        </div>
-
-                        <div>
-                            <span class="detail-label">Stopp 2</span>
-                            <strong>Patrik – Solbacken 5A</strong>
-                        </div>
-
-                        <div>
-                            <span class="detail-label">Stopp 3</span>
-                            <strong>Carlsson – Helenedalsvägen 26</strong>
-                        </div>
-                    </div>
-
-                    <p class="car-note">
-                        Bil A - Västra Öjersjö och Mölndal kör Kristoffersson med tre stopp och upphämtning av
-                        Örjan, Patrik och Carlsson.
-                    </p>
-                </article>
-
-                <!-- Bil B – ÖÖ + S -->
-                <article class="car-card car-card-pending">
-                    <div class="car-card-header">
-                        <span class="car-icon">🚙</span>
-                        <div>
-                            <p class="car-label">Bil B</p>
-                            <h3>ÖÖ + S</h3>
-                        </div>
-                    </div>
-
-                    <div class="car-details">
-                        <div>
-                            <span class="detail-label">Förare</span>
-                            <strong>Magnus</strong>
-                        </div>
-
-                        <div>
-                            <span class="detail-label">Stopp 1</span>
-                            <strong>Marcus – Lodjursvägen 16</strong>
-                        </div>
-
-                        <div>
-                            <span class="detail-label">Stopp 2</span>
-                            <strong>Ingemar – Bråtegårdsvägen 16 A</strong>
-                        </div>
-                    </div>
-
-                    <p class="car-note">
-                        Bil B - Östra Öjersjö och Sävedalen kör Magnus med upphämtning av Marcus och Ingemar.
-                    </p>
-                </article>
-
-            </div>
-
-            <div class="transport-plan">
-                <h3>Transportupplägg</h3>
-
-                <p>
-                    Två bilar används för att transportera alla spelare till Barsebäck
-                    på ett så smidigt sätt som möjligt.
-                </p>
-
-            </div>
-
-            <div class="important-transport-info">
-                <span>✓</span>
-                <div>
-                    <strong>Inga golfvagnar behöver tas med</strong>
-                    <p>
-                        Lånevagnar ingår på Barsebäck Resort.
-                    </p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>© 2026 Partille Goes Barsebäck</p>
-            <p>Golf, gemenskap och dramatik på högsta nivå.</p>
-        </footer>
+        <!-- Players section -->
+        <section id="players" class="section section-alt">
+            <div class="section-inner">
+                <h2>Players</h2>
+                <p>
+                    Åtta spelare deltar i årets upplaga. Två bilar kör ner från Partille med
+                    upphämtning enligt planerna under “Get there”.
+                </p>
 
+                <div class="players-grid">
+                    <article class="player-card">
+                        <h3>Kristoffersson</h3>
+                        <p>Förare Bil A – Västra Öjersjö &amp; Mölndal.</p>
+                    </article>
+                    <article class="player-card">
+                        <h3>Magnus</h3>
+                        <p>Förare Bil B – Östra Öjersjö &amp; Sävedalen.</p>
+                    </article>
+                    <article class="player-card">
+                        <h3>Örjan</h3>
+                        <p>Upphämtning i Västra Öjersjö.</p>
+                    </article>
+                    <article class="player-card">
+                        <h3>Patrik</h3>
+                        <p>Upphämtning enligt Bil A-rutten.</p>
+                    </article>
+                    <article class="player-card">
+                        <h3>Carlsson</h3>
+                        <p>Upphämtning enligt Bil A-rutten.</p>
+                    </article>
+                    <article class="player-card">
+                        <h3>Marcus</h3>
+                        <p>Upphämtning enligt Bil B-rutten.</p>
+                    </article>
+                    <article class="player-card">
+                        <h3>Ingemar</h3>
+                        <p>Upphämtning enligt Bil B-rutten.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule section -->
+        <section id="schedule" class="section">
+            <div class="section-inner">
+                <h2>Schedule</h2>
+
+                <div class="day-grid">
+                    <article class="day-card">
+                        <h3>Fredag 16 oktober</h3>
+                        <ul class="day-list">
+                            <li>Ankomst Barsebäck Resort och incheckning.</li>
+                            <li>Eftermiddag: lättare golf/inspel på banan.</li>
+                            <li>17:30 – Prisutdelning i baren.</li>
+                            <li>18:30 – Shuttle till hotellet.</li>
+                        </ul>
+                    </article>
+
+                    <article class="day-card">
+                        <h3>Lördag 17 oktober</h3>
+                        <ul class="day-list">
+                            <li>Förmiddag: Bästbollmatcher i lagformat.</li>
+                            <li>Eftermiddag: Fortsatta matcher eller inspel.</li>
+                            <li>17:30 – Prisutdelning i baren.</li>
+                            <li>
+                                18:30 – Shuttle till hotellet
+                                (Patrik har möjlighet att stanna kvar i klubbens bar).
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="day-card">
+                        <h3>Söndag 18 oktober</h3>
+                        <ul class="day-list">
+                            <li>Singelmatcher med Ryder Cup-poängräkning.</li>
+                            <li>Avslutning på klubben, summering och hemresa.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get there section -->
+        <section id="get-there" class="section section-alt">
+            <div class="section-inner">
+                <h2>Get there</h2>
+                <p>
+                    Transporten till Barsebäck sker i två bilar med fasta upphämtningsstopp.
+                    Se respektive bil nedan för ordning, förare och adresser.
+                </p>
+
+                <div class="cars-grid">
+                    <!-- Bil A – VÖ + M -->
+                    <article class="car-card">
+                        <div class="car-card-header">
+                            <span class="car-icon">🚗</span>
+                            <div>
+                                <p class="car-label">Bil A</p>
+                                <h3>VÖ + M</h3>
+                            </div>
+                        </div>
+
+                        <div class="car-details">
+                            <div class="car-stop">
+                                <span class="detail-label">Förare</span>
+                                <span class="car-stop-name">Kristoffersson</span>
+                            </div>
+
+                            <div class="car-stop">
+                                <span class="detail-label">Stopp 1</span>
+                                <span class="car-stop-name">Örjan</span>
+                                <span class="car-stop-address">Trädgårdsgatan 8</span>
+                            </div>
+
+                            <div class="car-stop">
+                                <span class="detail-label">Stopp 2</span>
+                                <span class="car-stop-name">Patrik</span>
+                                <span class="car-stop-address">Solbacken 5A</span>
+                            </div>
+
+                            <div class="car-stop">
+                                <span class="detail-label">Stopp 3</span>
+                                <span class="car-stop-name">Carlsson</span>
+                                <span class="car-stop-address">Helenedalsvägen 26</span>
+                            </div>
+                        </div>
+
+                        <p class="car-note">
+                            Bil A – Västra Öjersjö och Mölndal körs av Kristoffersson med tre stopp
+                            och upphämtning av Örjan, Patrik och Carlsson.
+                        </p>
+                    </article>
+
+                    <!-- Bil B – ÖÖ + S -->
+                    <article class="car-card car-card-pending">
+                        <div class="car-card-header">
+                            <span class="car-icon">🚙</span>
+                            <div>
+                                <p class="car-label">Bil B</p>
+                                <h3>ÖÖ + S</h3>
+                            </div>
+                        </div>
+
+                        <div class="car-details">
+                            <div class="car-stop">
+                                <span class="detail-label">Förare</span>
+                                <span class="car-stop-name">Magnus</span>
+                            </div>
+
+                            <div class="car-stop">
+                                <span class="detail-label">Stopp 1</span>
+                                <span class="car-stop-name">Marcus</span>
+                                <span class="car-stop-address">Lodjursvägen 16</span>
+                            </div>
+
+                            <div class="car-stop">
+                                <span class="detail-label">Stopp 2</span>
+                                <span class="car-stop-name">Ingemar</span>
+                                <span class="car-stop-address">Bråtegårdsvägen 16 A</span>
+                            </div>
+                        </div>
+
+                        <p class="car-note">
+                            Bil B – Östra Öjersjö och Sävedalen körs av Magnus med upphämtning av
+                            Marcus och Ingemar.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resort section -->
+        <section id="resort" class="section">
+            <div class="section-inner">
+                <h2>Barsebäck Resort</h2>
+                <p>
+                    Barsebäck erbjuder en av Sveriges mest klassiska golfanläggningar med boende,
+                    restaurang och bar direkt vid banan. Efter rundorna samlas vi i klubbhuset
+                    för prisutdelning och genomgång.
+                </p>
+                <ul class="resort-list">
+                    <li>Närhet mellan bana, range, klubbhus och boende.</li>
+                    <li>Bar för prisutdelning kl. 17:30 fredag och lördag.</li>
+                    <li>Shuttle till hotellet 18:30 båda kvällarna (Patrik kan stanna i baren).</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <footer class="site-footer">
+        <p>Partille Goes Barsebäck · 16–18 oktober · Barsebäck Resort</p>
+    </footer>
+
+    <script>
+        // Enkel menytoggle för mobil
+        const navToggle = document.getElementById('navToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        navToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('nav-open');
+            navToggle.classList.toggle('nav-open');
+        });
+
+        // Smidig scroll och aktiv länk-markering
+        const navLinks = document.querySelectorAll('.main-nav a');
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (!target) return;
+
+                const headerOffset = document.querySelector('.site-header').offsetHeight;
+                const rect = target.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const offsetTop = rect.top + scrollTop - headerOffset + 1;
+
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+
+                // Stäng mobilmenyn efter klick
+                mainNav.classList.remove('nav-open');
+                navToggle.classList.remove('nav-open');
+            });
+        });
+
+        // Markera aktiv sektion vid scroll
+        const sections = document.querySelectorAll('main section');
+
+        function onScroll() {
+            const scrollPos = window.scrollY;
+            const headerHeight = document.querySelector('.site-header').offsetHeight;
+
+            sections.forEach((section) => {
+                const top = section.offsetTop - headerHeight - 20;
+                const bottom = top + section.offsetHeight;
+                const id = section.getAttribute('id');
+
+                if (scrollPos >= top && scrollPos < bottom) {
+                    navLinks.forEach((link) => {
+                        link.classList.toggle(
+                            'active',
+                            link.getAttribute('href') === '#' + id
+                        );
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+    </script>
 </body>
 </html>
