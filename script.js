@@ -1,49 +1,55 @@
-const menuToggle = document.getElementById("menuToggle");
-const sidebar = document.getElementById("sidebar");
-const navLinks = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll(".page-section");
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.page-section');
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
 
-menuToggle.addEventListener("click", () => {
-    const isOpen = sidebar.classList.toggle("open");
+    // Mobilmeny
+    if (menuToggle && sidebar) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = sidebar.classList.toggle('open');
+            menuToggle.setAttribute('aria-label', isOpen ? 'Stäng meny' : 'Öppna meny');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+    }
 
-    menuToggle.setAttribute("aria-label", isOpen ? "Stäng meny" : "Öppna meny");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.forEach(item => item.classList.remove("active"));
-        link.classList.add("active");
-
-        if (window.innerWidth <= 760) {
-            sidebar.classList.remove("open");
-            menuToggle.setAttribute("aria-label", "Öppna meny");
-            menuToggle.setAttribute("aria-expanded", "false");
-        }
-    });
-});
-
-function updateActiveNavigation() {
-    let currentSection = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 180;
-
-        if (window.scrollY >= sectionTop) {
-            currentSection = section.id;
-        }
-    });
-
+    // Navigering
     navLinks.forEach(link => {
-        const linkTarget = link.getAttribute("href").replace("#", "");
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
 
-        link.classList.toggle(
-            "active",
-            linkTarget === currentSection ||
-            (currentSection === "main-info" && linkTarget === "home")
-        );
+                if (window.innerWidth <= 760 && sidebar && menuToggle) {
+                    sidebar.classList.remove('open');
+                    menuToggle.setAttribute('aria-label', 'Öppna meny');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
     });
-}
 
-window.addEventListener("scroll", updateActiveNavigation);
-window.addEventListener("load", updateActiveNavigation);
+    // Markera aktiv sektion
+    function updateActiveNavigation() {
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 180;
+            if (window.scrollY >= sectionTop) {
+                currentSection = section.id;
+            }
+        });
+
+        navLinks.forEach(link => {
+            const targetId = link.getAttribute('href')?.slice(1);
+            link.classList.toggle('active', targetId === currentSection);
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNavigation);
+    window.addEventListener('load', updateActiveNavigation);
+    updateActiveNavigation();
+});
