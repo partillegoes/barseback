@@ -7,15 +7,12 @@ menuToggle.addEventListener("click", () => {
     const isOpen = sidebar.classList.toggle("open");
 
     menuToggle.setAttribute("aria-label", isOpen ? "Stäng meny" : "Öppna meny");
-    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
-        navLinks.forEach(item => {
-            item.classList.remove("active");
-        });
-
+        navLinks.forEach(item => item.classList.remove("active"));
         link.classList.add("active");
 
         if (window.innerWidth <= 760) {
