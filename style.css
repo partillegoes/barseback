@@ -482,3 +482,284 @@ footer { padding: 35px 9%; display: flex; justify-content: space-between; backgr
     .ryder-cup-board { grid-template-columns: 1fr; gap: 12px; }
     .report-grid, .schedule-days, .car-list { grid-template-columns: 1fr; }
 }
+
+/* Teams */
+.teams-section {
+    background: #e3e8de;
+}
+
+.teams-intro {
+    max-width: 800px;
+    margin-bottom: 32px;
+    color: #394841;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.teams-intro p + p {
+    margin-top: 14px;
+}
+
+.teams-grid {
+    max-width: 950px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.team-card {
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 6px 20px rgba(7, 27, 22, 0.08);
+}
+
+.team-header {
+    min-height: 110px;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+.team-label {
+    grid-column: 1 / -1;
+    color: var(--gray);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.team-header h3 {
+    font-size: 42px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.team-color {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.team-red .team-header {
+    border-bottom: 5px solid #ef7373;
+}
+
+.team-blue .team-header {
+    border-bottom: 5px solid #5aa1df;
+}
+
+.team-players {
+    padding: 12px 24px 20px;
+}
+
+.team-player {
+    padding: 14px 0;
+    border-bottom: 1px solid #e3e8de;
+}
+
+.team-player:last-child {
+    border-bottom: 0;
+}
+
+.teams-note {
+    max-width: 950px;
+    margin-top: 22px;
+    padding: 20px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    border-left: 4px solid var(--green-light);
+    background: var(--white);
+}
+
+.teams-note > span {
+    color: var(--green-light);
+    font-size: 24px;
+}
+
+.teams-note p {
+    margin-top: 5px;
+    color: #536158;
+    line-height: 1.6;
+}
+
+/* Schedule */
+.schedule-intro {
+    max-width: 720px;
+    margin: -12px 0 32px;
+    color: #536158;
+    line-height: 1.7;
+}
+
+.schedule-days {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    align-items: start;
+}
+
+.schedule-day {
+    min-width: 0;
+    box-shadow: 0 6px 20px rgba(7, 27, 22, 0.07);
+}
+
+.schedule-day-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.schedule-number {
+    color: var(--lime);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.schedule-weekday {
+    color: var(--gray);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.schedule-day-header h3 {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.schedule-event time {
+    color: var(--green-light);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.schedule-event h4 {
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+.schedule-event p {
+    color: #536158;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+/* Get there / transport */
+.transport-intro {
+    max-width: 760px;
+    margin: -12px 0 32px;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.car-list {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+
+.car-card {
+    min-width: 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.car-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.car-icon {
+    font-size: 30px;
+}
+
+.car-label {
+    color: #536158;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.car-card-header h3 {
+    color: var(--green-dark);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.car-details > div {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e3e8de;
+}
+
+.car-details > div:last-child {
+    border-bottom: 0;
+}
+
+.detail-label {
+    color: #65716a;
+    font-size: 12px;
+}
+
+.car-details strong {
+    color: var(--green-dark);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.car-note {
+    color: #536158;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.transport-plan,
+.important-transport-info {
+    max-width: 950px;
+    margin-top: 22px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+}
+
+.transport-plan h3 {
+    margin-bottom: 8px;
+    color: var(--lime);
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.transport-plan p,
+.important-transport-info p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.important-transport-info {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.important-transport-info > span {
+    color: var(--lime);
+    font-size: 22px;
+}
+
+@media (max-width: 760px) {
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-days {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-event {
+        grid-template-columns: 80px minmax(0, 1fr);
+    }
+}
